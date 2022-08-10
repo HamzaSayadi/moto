@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+echo -e "=== Running tests..=== \n"
+
+source venv/bin/activate
+pytest

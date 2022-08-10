@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+echo "=== Initializing ==="
+
+rm -rf venv
+
+echo "==> Creating Virtualenv"
+python3 -m venv ./venv
+source venv/bin/activate
+
+echo "==> installing dev dependencies"
+pip install -r requirements.txt
